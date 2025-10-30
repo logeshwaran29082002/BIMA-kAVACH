@@ -4,3 +4,82 @@ body {
   height: auto;
   font-family: 'Poppins', sans-serif;
 }
+
+
+.divider-line {
+  width: 235px;              /* adjust length as needed */
+  height: 3px; 
+  margin-left: 8px;             /* line thickness */
+  background: linear-gradient(
+    to right,
+    red 20%,
+    gray 0%,
+    gray 100%
+  );
+  border-radius: 5px;       /* optional smooth ends */
+}
+.hero-section {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Red shadow effect for main button */
+.shadow-red {
+  box-shadow: 0px 8px 30px rgba(255, 0, 0, 0.3);
+}
+
+/* Image wrapper and corners */
+.image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.image-wrapper .main-img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Red triangle corners */
+.corner {
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-style: solid;
+}
+
+/* Top-right corner */
+.corner.top-right {
+  top: 100px;
+  right: 0;
+  border-width: 40px 40px 0 0;
+  border-color: #b30000 transparent transparent transparent;
+}
+
+/* Bottom-right corner */
+.corner.bottom-right {
+  bottom: 0;
+  right: 0;
+  border-width: 0 40px 40px 0;
+  border-color: transparent #b30000 transparent transparent;
+}
+
+/* Middle-left red arrow */
+.corner.middle-left {
+  top: 50%;
+  left: -20px;
+  transform: translateY(-50%);
+  border-width: 25px 0 25px 20px;
+  border-color: transparent transparent transparent #b30000;
+}
+
+/* Responsive fine-tuning */
+@media (max-width: 992px) {
+  .corner.middle-left {
+    left: -10px;
+    border-width: 10px 0 10px 15px;
+  }
+  .image-wrapper .main-img {
+    max-width: 100%;
+  }
+}
