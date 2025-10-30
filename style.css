@@ -72,6 +72,70 @@ body {
   border-width: 25px 0 25px 20px;
   border-color: transparent transparent transparent #b30000;
 }
+.cloud-hosting-section {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  width: 100%;
+}
+
+.logo-img {
+  max-height: 45px;
+  object-fit: contain;
+  opacity: 0.9;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.feature-card {
+  padding: 20px;
+}
+
+.icon-wrapper {
+  width: 85px;
+  height: 85px;
+  margin: 0 auto;
+  background-color: #ffeaea;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-wrapper img {
+  width: 42px;
+  height: 42px;
+}
+
+.cloud-hosting-section h5 {
+  font-weight: 600;
+  color: #000;
+}
+
+.cloud-hosting-section p {
+  color: #6c757d;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .cloud-hosting-section h2 {
+    font-size: 1.8rem;
+  }
+  .cloud-hosting-section p {
+    width: 100%;
+  }
+  .icon-wrapper {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+
+
 
 /* Responsive fine-tuning */
 @media (max-width: 992px) {
