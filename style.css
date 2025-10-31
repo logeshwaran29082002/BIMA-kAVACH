@@ -2,21 +2,15 @@ body {
   margin: 0;
   padding: 0;
   height: auto;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
-
 .divider-line {
-  width: 235px;              /* adjust length as needed */
-  height: 3px; 
-  margin-left: 8px;             /* line thickness */
-  background: linear-gradient(
-    to right,
-    red 20%,
-    gray 0%,
-    gray 100%
-  );
-  border-radius: 5px;       /* optional smooth ends */
+  width: 235px; /* adjust length as needed */
+  height: 3px;
+  margin-left: 8px; /* line thickness */
+  background: linear-gradient(to right, red 20%, gray 0%, gray 100%);
+  border-radius: 5px; /* optional smooth ends */
 }
 .hero-section {
   font-family: "Poppins", sans-serif;
@@ -121,6 +115,156 @@ body {
   line-height: 1.6;
 }
 
+.pricing-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.pricing-section h2 {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.toggle-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 50px;
+}
+
+/* remove Bootstrap's inbuilt 2em width */
+.form-switch .form-check-input {
+  width: 60px !important; /* fixed custom width */
+  height: 30px !important; /* fixed custom height */
+  border-radius: 30px;
+  background-color: #e63946;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form-check-input:checked {
+  background-color: #2ecc71;
+  background-position: right center;
+}
+
+.form-check-input:focus {
+  box-shadow: none;
+}
+
+.tab-menu {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.tab-menu div {
+  margin: 0 20px;
+  padding-bottom: 8px;
+  font-weight: 600;
+  border-bottom: 3px solid transparent;
+  cursor: pointer;
+}
+
+.tab-menu .active {
+  color: #e63946;
+  border-color: #e63946;
+}
+
+.pricing-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 25px;
+  background: #fff;
+  transition: 0.3s;
+  height: 100%;
+}
+
+.pricing-card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin-top: 15px;
+}
+
+.pricing-card ul li::before {
+  content: "✓";
+  color: #198754;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.btn-outline-dark {
+  border-radius: 30px;
+  padding: 10px 25px;
+  font-weight: 600;
+}
+
+.btn-outline-dark:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.img-width {
+  width: 100%;
+}
+.quote-icon {
+  display: flex;
+  justify-content: start;
+  width: 10px;
+  height: 10px;
+  filter: brightness(0) saturate(100%) invert(36%) sepia(91%) saturate(1523%)
+    hue-rotate(197deg) brightness(98%) contrast(102%);
+}
+
+.card {
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.quote-icon {
+  width: 40px;
+}
+.hover-scale {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.hover-scale:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+/* Custom responsive adjustments */
+@media (max-width: 767.98px) {
+  .left-card {
+    margin-left: 0 !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .left-card {
+    margin-left: 50px !important;
+  }
+}
+
 @media (max-width: 768px) {
   .cloud-hosting-section h2 {
     font-size: 1.8rem;
@@ -134,9 +278,6 @@ body {
   }
 }
 
-
-
-
 /* Responsive fine-tuning */
 @media (max-width: 992px) {
   .corner.middle-left {
@@ -145,5 +286,65 @@ body {
   }
   .image-wrapper .main-img {
     max-width: 100%;
+  }
+}
+
+
+
+
+
+.awesome-box {
+  background-color: #f8fbff; /* light background */
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.corner {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+/* Top-left corner */
+.corner-top-left {
+  top: 0;
+  left: 0;
+  border-width: 0 25px 25px 0;
+  border-color: transparent #c00 transparent transparent;
+}
+
+/* Top-right corner */
+.corner-top-right {
+  top: 0;
+  right: 0;
+  border-width: 25px 0 0 25px;
+  border-color: #c00 transparent transparent transparent;
+}
+
+/* Bottom-left corner */
+.corner-bottom-left {
+  bottom: 0;
+  left: 0;
+  border-width: 25px 25px 0 0;
+  border-color: #c00 transparent transparent transparent;
+}
+
+/* Bottom-right corner */
+.corner-bottom-right {
+  bottom: 0;
+  right: 0;
+  border-width: 0 0 25px 25px;
+  border-color: transparent transparent #c00 transparent;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .awesome-box {
+    padding: 3rem 1.5rem;
+  }
+  .corner {
+    border-width: 18px;
   }
 }
